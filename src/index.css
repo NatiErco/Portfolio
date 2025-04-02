@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+
+
 }
 
 body {
@@ -18,6 +20,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu sidebar */
  
 }
 
@@ -39,7 +42,7 @@ body {
 
 h2 {
   font-weight: bold;
-  color: #007bff;
+  color: #d8b9ff;
   margin-bottom: 20px;
 }
 
@@ -50,8 +53,9 @@ p {
 }
 
 .content {
-  margin-left: 320px; /* Debe coincidir con el ancho del sidebar */
-  width: calc(100% - 320px);
+  margin-left: 300px; /* Debe coincidir con el ancho del sidebar */
+  width: calc(100% - 300px);
+  align-items: flex-start; /* Alinea los elementos al inicio */;
 }
 
 @media (max-width: 768px) {

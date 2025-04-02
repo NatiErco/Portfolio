@@ -11,9 +11,9 @@ function Home() {
         <section
           id="sobre-mi"
           className="section bg-white p-4 rounded shadow-lg w-75 w-75 mb-5 text-center d-flex flex-column justify-content-left"
-          style={{ minHeight: "600px" }}
+          style={{ minHeight: "600px", }}
         >
-          <h2 className="text-primary fw-bold montserrat">Sobre mí</h2>
+          <h2 className="fw-bold montserrat">Sobre mí</h2>
           <p className="text-dark">¡Hola! Soy Natalia Ercolano, una apasionada desarrolladora web con experiencia en análisis de datos y optimización de procesos. Mi trayectoria comenzó como contable, donde perfeccioné mis habilidades en el manejo de datos y la mejora de sistemas.
 
           Actualmente, me especializo en tecnologías como JavaScript, React y Node.js, creando aplicaciones web dinámicas y eficientes.
@@ -26,9 +26,9 @@ function Home() {
           </p>
         
         
-          <button className="btn btn-primary mt-4" onClick={() => window.location.href = "#Contactame"}>
+          <button className="btn mt-4" onClick={() => window.location.href = "#Contactame"}>
           Descagar CV  </button>
-          <button className="btn btn-primary mt-4" onClick={() => window.location.href = "#Contactame"}>
+          <button className="btn  mt-4" onClick={() => window.location.href = "#Contactame"}>
           Contactame  </button> 
           
 
@@ -39,7 +39,7 @@ function Home() {
           className="section bg-white p-4 rounded shadow-lg w-75 mb-5 text-center d-flex flex-column justify-content-center"
           style={{ minHeight: "600px" }}
         >
-          <h2 className="text-primary fw-bold montserrat">Tecnologías</h2>
+          <h2 className="fw-bold montserrat">Tecnologías</h2>
           <p className="text-dark">
             En esta sección mencionas las tecnologías que dominas.
           </p>
@@ -50,7 +50,7 @@ function Home() {
           className="section bg-white p-4 rounded shadow-lg w-75 mb-5 text-center d-flex flex-column justify-content-center"
           style={{ minHeight: "600px" }}
         >
-          <h2 className="text-primary fw-bold montserrat">Proyectos</h2>
+          <h2 className=" fw-bold montserrat">Proyectos</h2>
           <p className="text-dark">
             Describe tus proyectos y lo que has logrado hasta ahora.
           </p>
