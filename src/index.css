@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9fa; /* Un tono claro para mejorar el contraste */
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.section {
+  padding: 60px;
+  min-height: 100vh;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+#sobre-mi {
+  background-color: #ffffff;
+}
+
+#Tecnologias {
+  background-color: #e0e0e0;
+}
+
+#Proyectos {
+  background-color: #d6d6d6;
+}
+
+#Contactame {
+  background-color: #b0b0b0;
+}
+
+h2 {
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #333;
+  max-width: 800px;
+  text-align: center;
+}
+
+.content {
+  margin-left: 320px; /* Debe coincidir con el ancho del sidebar */
+  width: calc(100% - 320px);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
