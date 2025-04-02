@@ -1,4 +1,4 @@
-import "./Index.css";
+import "./index.css";
 
 import Home from "./Pages/Home.jsx";
 
