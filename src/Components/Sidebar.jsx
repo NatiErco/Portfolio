@@ -11,15 +11,15 @@ import React from "react";
 function Sidebar() {
   return (
     <div
-      className="sidebar d-flex flex-column align-items-center p-4 m-4 bg-dark text-light top-0 bottom-0 position-fixed top-0 start-0 rounded-end shadow-lg"
-      style={{
-        width: "300px",
-        height: "calc(100vh - 40px)", // Ajusta altura con margen
-       background: "linear-gradient(180deg, #1b1b2f, #23234e)", // Degradado oscuro
-        borderRadius: "20px",
-        boxShadow: "0 0 15px rgba(177, 156, 217, 0.5)", // Brillo violeta
-        color: "#d8b9ff", // Texto lila claro
-      }}
+    className="sidebar d-flex flex-column align-items-center p-4 text-light position-fixed top-0 start-0 vh-100"
+    style={{
+      width: "300px",
+      background: "linear-gradient(180deg, #1b1b2f, #23234e)", 
+      borderRadius: "20px",
+      boxShadow: "0 0 15px rgba(177, 156, 217, 0.5)", 
+      color: "#d8b9ff",
+      zIndex: 1000, // Asegura que esté sobre todo
+    }}
     >
       <img
         src="perfil.jpeg"

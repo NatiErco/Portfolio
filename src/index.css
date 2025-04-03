@@ -1,44 +1,37 @@
 html {
   scroll-behavior: smooth;
 
-
 }
 
 body {
-  background-color: #f8f9fa; /* Un tono claro para mejorar el contraste */
   font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, #0c0c0c, #1a1a1a);
+  /* background-color: #121212 !important; */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
 
+@keyframes neon-lines {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .section {
+  background: rgba(20, 20, 20, 0.8); /* Un fondo oscuro traslúcido */
   padding: 60px;
   min-height: 100vh;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu sidebar */
- 
+  text-align: center;
+  
 }
 
-#sobre-mi {
-  background-color: #ffffff;
-}
-
-#Tecnologias {
-  background-color: #e0e0e0;
-}
-
-#Proyectos {
-  background-color: #d6d6d6;
-}
-
-#Contactame {
-  background-color: #b0b0b0;
-}
 
 h2 {
   font-weight: bold;
@@ -47,15 +40,71 @@ h2 {
 }
 
 p {
-  color: #333;
+  color: whitesmoke;
   max-width: 800px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .content {
   margin-left: 300px; /* Debe coincidir con el ancho del sidebar */
   width: calc(100% - 300px);
   align-items: flex-start; /* Alinea los elementos al inicio */;
+  z-index: 2; /* Asegura que el contenido esté sobre el fondo */
+}
+
+
+
+.boton {
+  padding: 12px 30px; /* Aumentamos el padding para que el tamaño sea más consistente */
+  border: 3px solid #b19cd9; /* Borde brillante */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #2b2b2b; /* Fondo oscuro */ 
+  color: whitesmoke;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 0 10px; /* Espaciado entre los botones */
+  min-width: 180px; /* Asegura que todos los botones tengan el mismo ancho */
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 30px;
+}
+
+.boton:hover {
+  transform: translateY(-5px); /* Desplazamiento hacia arriba al pasar el ratón */
+  box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8); /* Aumentar la sombra al hacer hover */
+}
+
+
+
+/* Contenedor para alinear los botones */
+.botones-container {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: center; /* Alinea los botones verticalmente */
+  gap: 20px; /* Espaciado entre los botones */
+}
+
+/* Estilo global de las tarjetas */
+.card {
+  width: 250px; /* Aseguramos que todas las tarjetas tengan el mismo tamaño */
+  min-height: 200px;
+  border-radius: 10px;
+  background-color: #2b2b2b; /* Fondo oscuro */
+  box-shadow: 0px 10px 20px rgba(255, 0, 221, 0.5); /* Sombra futurista */
+  border: 3px solid #b19cd9; /* Borde brillante */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px; /* Espaciado entre tarjetas */
+}
+.card h3{
+margin-top: 8px;  
+}
+
+/* Efecto hover para las tarjetas */
+.card:hover {
+  transform: translateY(-10px); /* Desplazamiento hacia arriba al pasar el ratón */
+  box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8); /* Aumentar la sombra al hacer hover */
 }
 
 @media (max-width: 768px) {
@@ -70,3 +119,4 @@ p {
     width: 100%;
   }
 }
+

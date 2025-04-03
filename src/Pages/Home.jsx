@@ -7,48 +7,101 @@ function Home() {
       <div className="me-4">
         <Sidebar />
       </div>
-      <div className="content flex-grow-1 px-4 py-5">
+      <div
+        className="content flex-grow-1 px-4 py-5"
+        style={{ marginLeft: "320px" }}
+      >
         <section
           id="sobre-mi"
-          className="section bg-white p-4 rounded shadow-lg w-75 w-75 mb-5 text-center d-flex flex-column justify-content-left"
-          style={{ minHeight: "600px", }}
+          className="section  p-4 rounded shadow-lg w-75 w-75 mb-5 text-center d-flex flex-column justify-content-left"
+          style={{
+            minHeight: "600px",
+            border: "1px solid rgba(216, 211, 211, 0.05)", // Borde casi invisible
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Sombra leve
+          }}
         >
           <h2 className="fw-bold montserrat">Sobre mí</h2>
-          <p className="text-dark">¡Hola! Soy Natalia Ercolano, una apasionada desarrolladora web con experiencia en análisis de datos y optimización de procesos. Mi trayectoria comenzó como contable, donde perfeccioné mis habilidades en el manejo de datos y la mejora de sistemas.
-
-          Actualmente, me especializo en tecnologías como JavaScript, React y Node.js, creando aplicaciones web dinámicas y eficientes.
-          
-          Estoy en búsqueda activa de prácticas o programas de trainee en el ámbito del desarrollo web, con el objetivo de seguir creciendo profesionalmente y aportar valor a equipos innovadores. Además, estoy aprendiendo inglés técnico para ampliar mis horizontes y colaborar en proyectos internacionales.
-          
-          Si buscas una desarrolladora web comprometida, con una sólida base en análisis de datos y una actitud proactiva, ¡estaré encantada de conectar contigo!
-        
-  
+          <p className="text-light fs-10 mt-4">
+            ¡Hola! Soy Natalia Ercolano, desarrolladora web apasionada por la
+            tecnología. Me especializo en JavaScript, React y Node.js, y utilizo
+            mi experiencia en análisis de datos para crear aplicaciones
+            dinámicas. Mi objetivo es seguir creciendo, colaborar con equipos
+            multidisciplinarios y mantenerme siempre actualizada con las últimas
+            tendencias del sector.
           </p>
-        
-        
-          <button className="btn mt-4" onClick={() => window.location.href = "#Contactame"}>
-          Descagar CV  </button>
-          <button className="btn  mt-4" onClick={() => window.location.href = "#Contactame"}>
-          Contactame  </button> 
-          
-
+          <div className="botones-container">
+            <button
+              className="boton"
+              onClick={() => window.open("/cv.pdf", "_blank")}
+            >
+              CV Español{" "}
+            </button>
+            <button
+              className="boton"
+              onClick={() => (window.location.href = "#Contactame")}
+            >
+              Contactame{" "}
+            </button>
+          </div>
         </section>
 
         <section
           id="Tecnologias"
-          className="section bg-white p-4 rounded shadow-lg w-75 mb-5 text-center d-flex flex-column justify-content-center"
-          style={{ minHeight: "600px" }}
+          className="section p-4 rounded shadow-lg w-75 mb-5 text-center d-flex flex-column justify-content-center"
+          style={{
+            minHeight: "600px",
+            border: "1px solid rgba(216, 211, 211, 0.05)", // Borde casi invisible
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Sombra leve
+          }}
         >
-          <h2 className="fw-bold montserrat">Tecnologías</h2>
-          <p className="text-dark">
-            En esta sección mencionas las tecnologías que dominas.
-          </p>
+          <h2 className="fw-bold montserrat ">Tecnologías</h2>
+
+          {/* Contenedor de las tarjetas */}
+          <div className="d-flex flex-column align-items-center mt-4">
+            <div className="d-flex justify-content-between w-100 mb-4">
+              {/* Card 1: Frontend */}
+              <div className="card text-center">
+                <h3 className="text-light fw-bold">Frontend</h3>
+                <p>HTML, CSS, Bootstrap, Tailwind, JavaScript Vanilla, React Vite</p>
+          
+              </div>
+
+              {/* Card 2: Backend */}
+              <div className="card text-center">
+                <h3 className="text-light fw-bold">Backend</h3>
+                <p>
+                  Node.js, Express, MySql
+                
+                Postgres, JWT, Auth0
+              </p>
+              </div>
+            </div>
+
+            <div className="d-flex justify-content-between w-100">
+              {/* Card 3: Educación */}
+              <div className="card text-center">
+                <h3 className="text-light fw-bold ">Educación</h3>
+                <p>Bootcamp FullStack Developer, Develhope-Academy, 2024</p>
+                <p>Frontend-Platzi</p>
+              </div>
+
+              {/* Card 4: Cursos */}
+              <div className="card text-center">
+                <h3 className="text-light fw-bold">Metodologías</h3>
+                <p>Git, Git-Hub, Trello, 
+                despliegue en Netlify, Vercel y Render</p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section
           id="Proyectos"
-          className="section bg-white p-4 rounded shadow-lg w-75 mb-5 text-center d-flex flex-column justify-content-center"
-          style={{ minHeight: "600px" }}
+          className="section p-4 rounded shadow-lg w-75 mb-5 text-center d-flex flex-column justify-content-center"
+          style={{
+            minHeight: "600px",
+            
+          }}
         >
           <h2 className=" fw-bold montserrat">Proyectos</h2>
           <p className="text-dark">
