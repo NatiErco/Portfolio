@@ -1,27 +1,58 @@
 html {
   scroll-behavior: smooth;
-
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(180deg, #0c0c0c, #1a1a1a);
-  /* background-color: #121212 !important; */
-  color: white;
-  margin: 0;
-  padding: 0;
+.main-container {
+  display: flex;
 }
 
+/* Eliminamos el margin-left fijo para usar Bootstrap desde el componente */
+.content {
+  padding-top: 40px;
+}
+
+/* Animación opcional para elementos con efecto neon */
 @keyframes neon-lines {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+ 
+.sidebar {
+  width: 300px;
+  background: linear-gradient(180deg, #1b1b2f, #23234e);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(177, 156, 217, 0.5);
+  color: #d8b9ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  transition: all 0.3s ease; /* Suaviza transiciones para pantallas pequeñas */
 }
 
+.sidebar img {
+  border: 3px solid #b19cd9;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(177, 156, 217, 0.7);
+}
+
+.sidebar h2 {
+  color: #d8b9ff;
+}
+
+
+/* Estilo general para secciones */
 .section {
-  background: rgba(20, 20, 20, 0.8); /* Un fondo oscuro traslúcido */
+  background: rgba(20, 20, 20, 0.8); /* Fondo oscuro translúcido */
   padding: 60px;
-  min-height: 100vh;
   border-radius: 10px;
   margin-bottom: 40px;
   display: flex;
@@ -29,84 +60,76 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(216, 211, 211, 0.05);
 }
 
-
+/* Títulos */
 h2 {
   font-weight: bold;
   color: #d8b9ff;
   margin-bottom: 20px;
 }
 
+/* Párrafos */
 p {
   color: whitesmoke;
   max-width: 800px;
-  text-align: center;
   margin-top: 10px;
 }
 
-.content {
-  margin-left: 300px; /* Debe coincidir con el ancho del sidebar */
-  width: calc(100% - 300px);
-  align-items: flex-start; /* Alinea los elementos al inicio */;
-  z-index: 2; /* Asegura que el contenido esté sobre el fondo */
-}
-
-
-
+/* Botones personalizados */
 .boton {
-  padding: 12px 30px; /* Aumentamos el padding para que el tamaño sea más consistente */
-  border: 3px solid #b19cd9; /* Borde brillante */
-  border-radius: 8px; /* Bordes redondeados */
-  background-color: #2b2b2b; /* Fondo oscuro */ 
+  padding: 12px 30px;
+  border: 3px solid #b19cd9;
+  border-radius: 8px;
+  background-color: #2b2b2b;
   color: whitesmoke;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin: 0 10px; /* Espaciado entre los botones */
-  min-width: 180px; /* Asegura que todos los botones tengan el mismo ancho */
+  min-width: 180px;
   text-align: center;
-  margin-bottom: 8px;
   margin-top: 30px;
 }
 
 .boton:hover {
-  transform: translateY(-5px); /* Desplazamiento hacia arriba al pasar el ratón */
-  box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8); /* Aumentar la sombra al hacer hover */
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8);
 }
 
-
-
-/* Contenedor para alinear los botones */
+/* Contenedor de botones */
 .botones-container {
   display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
-  align-items: center; /* Alinea los botones verticalmente */
-  gap: 20px; /* Espaciado entre los botones */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-/* Estilo global de las tarjetas */
+/* Tarjetas reutilizables */
 .card {
-  width: 250px; /* Aseguramos que todas las tarjetas tengan el mismo tamaño */
+  width: 250px;
   min-height: 200px;
   border-radius: 10px;
-  background-color: #2b2b2b; /* Fondo oscuro */
-  box-shadow: 0px 10px 20px rgba(255, 0, 221, 0.5); /* Sombra futurista */
-  border: 3px solid #b19cd9; /* Borde brillante */
+  background-color: #2b2b2b;
+  box-shadow: 0px 10px 20px rgba(255, 0, 221, 0.5);
+  border: 3px solid #b19cd9;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0 10px; /* Espaciado entre tarjetas */
-}
-.card h3{
-margin-top: 8px;  
+  margin: 0 10px;
 }
 
-/* Efecto hover para las tarjetas */
+.card h3 {
+  margin-top: 8px;
+}
+
 .card:hover {
-  transform: translateY(-10px); /* Desplazamiento hacia arriba al pasar el ratón */
-  box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8); /* Aumentar la sombra al hacer hover */
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8);
 }
 
+/* RESPONSIVE para pantallas chicas */
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
@@ -115,8 +138,44 @@ margin-top: 8px;
   }
 
   .content {
-    margin-left: 0;
+    margin-left: 0 !important;
     width: 100%;
   }
 }
 
+
+/* Botón de hamburguesa en móviles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 0;
+  }
+
+  .sidebar img {
+    margin-left: 0;
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Añadimos un poco de padding */
+  .sidebar .text-light {
+    font-size: 14px;
+  }
+}
+
+/* Aseguramos que el contenido del sidebar sea responsive */
+.nav-link {
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.nav-link:hover {
+  background-color: rgba(177, 156, 217, 0.1);
+}
+
+.navbar-toggler {
+  display: none;
+}

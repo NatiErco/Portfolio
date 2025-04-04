@@ -1,15 +1,20 @@
-
-import ParticlesBackground from "./Components/Particles.jsx";
+import About from "./Components/About.jsx";
+import Contact from "./Components/Contact.jsx";
+import Proyects from "./Components/Proyects.jsx";
+import Sidebar from "./Components/Sidebar.jsx";
+import Technologies from "./Components/technologies.jsx";
 import "./index.css";
-
-import Home from "./Pages/Home.jsx";
 
 function App() {
   return (
-    <div style={{ position: "relative", minHeight: "100vh" }}>
-      <ParticlesBackground/> {/* Fondo de partículas en toda la app */}
-      <Home/>
- 
+    <div className="main-container">
+      <Sidebar />
+      <main className="content ms-md-5 px-3">
+        <About />
+        <Technologies />
+        <Proyects />
+        <Contact />
+      </main>
     </div>
   );
 }

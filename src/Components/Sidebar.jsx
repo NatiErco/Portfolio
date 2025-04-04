@@ -10,35 +10,23 @@ import React from "react";
 
 function Sidebar() {
   return (
-    <div
-    className="sidebar d-flex flex-column align-items-center p-4 text-light position-fixed top-0 start-0 vh-100"
-    style={{
-      width: "300px",
-      background: "linear-gradient(180deg, #1b1b2f, #23234e)", 
-      borderRadius: "20px",
-      boxShadow: "0 0 15px rgba(177, 156, 217, 0.5)", 
-      color: "#d8b9ff",
-      zIndex: 1000, // Asegura que esté sobre todo
-    }}
-    >
+    <div className="sidebar d-flex flex-column align-items-center p-4 text-light position-fixed top-0 start-0 vh-100">
       <img
         src="perfil.jpeg"
         alt="Perfil"
         className="rounded-circle mb-3"
         width="200"
         height="200"
-        style={{ border: "3px solid #b19cd9",
-        marginTop: "20px",
-        boxShadow: "0 0 10px rgba(177, 156, 217, 0.7)",}} // Brillo en imagen 
       />
-      <h2 className="text-center fw-bold fs-8 mb-3 mt-3" style={{ color: "#d8b9ff" }}>
+      <h2
+        className="text-center fw-bold fs-8 mb-3 mt-3" style={{ color: "#d8b9ff" }}>
         Natalia Ercolano
       </h2>
       <h3 className="text-light fs-6">Jr. FullStack Developer</h3>
 
-      <Nav className="flex-column mt-4 w-100 p-4">
+      <Nav className="flex-column mt-4 w-100 p-0">
         <Nav.Link
-          href="#sobre-mi"
+          href="#about-me"
           className="text-light fs-6 py-2 d-flex align-items-center"
         >
           <FontAwesomeIcon icon={faIdCard} className="me-2" /> Sobre mí
@@ -50,7 +38,7 @@ function Sidebar() {
           <FontAwesomeIcon icon={faCode} className="me-2" /> Tecnologias
         </Nav.Link>
         <Nav.Link
-          href="#Proyectos"
+          href="#Proyects"
           className="text-light fs-6 py-2 d-flex align-items-center"
         >
           <FontAwesomeIcon icon={faProjectDiagram} className="me-2" /> Proyectos
