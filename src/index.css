@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  background-color: #0d0c0cf9;
 }
 
 .main-container {
@@ -8,7 +9,10 @@ html {
 
 /* Eliminamos el margin-left fijo para usar Bootstrap desde el componente */
 .content {
-  padding-top: 40px;
+  margin-left: 300px; /* Espacio del sidebar fijo */
+  padding: 40px 20px;
+  width: 100%;
+  background-color: #0d0c0cf9;
 }
 
 /* Animación opcional para elementos con efecto neon */
@@ -29,7 +33,7 @@ html {
   background: linear-gradient(180deg, #1b1b2f, #23234e);
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(177, 156, 217, 0.5);
-  color: #d8b9ff;
+  color: #b9a3d4;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,6 +52,11 @@ html {
   color: #d8b9ff;
 }
 
+.redes a:hover {
+  color: #ae87de;
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out;
+  }
 
 /* Estilo general para secciones */
 .section {
@@ -62,6 +71,10 @@ html {
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(216, 211, 211, 0.05);
+  min-width: 320px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Títulos */
@@ -108,6 +121,8 @@ p {
   margin-top: 20px;
 }
 
+input 
+{border: 3px solid #b19cd9;}
 /* Tarjetas reutilizables */
 .card {
   width: 250px;
@@ -128,6 +143,9 @@ p {
   transform: translateY(-10px);
   box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8);
 }
+
+
+
 
 /* RESPONSIVE para pantallas chicas */
 @media (max-width: 768px) {
@@ -178,4 +196,38 @@ p {
 
 .navbar-toggler {
   display: none;
+}
+
+
+
+/* Estilo del scrollbar https://scrollbar.app/ */
+
+
+
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #ba53e2;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+  border: 4px solid #232e33;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }

@@ -6,6 +6,8 @@ import {
   faProjectDiagram,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import React from "react";
 
 function Sidebar() {
@@ -19,7 +21,9 @@ function Sidebar() {
         height="200"
       />
       <h2
-        className="text-center fw-bold fs-8 mb-3 mt-3" style={{ color: "#d8b9ff" }}>
+        className="text-center fw-bold fs-8 mb-3 mt-3"
+        style={{ color: "#d8b9ff" }}
+      >
         Natalia Ercolano
       </h2>
       <h3 className="text-light fs-6">Jr. FullStack Developer</h3>
@@ -47,9 +51,29 @@ function Sidebar() {
           href="#Contactame"
           className="text-light fs-6 py-2 d-flex align-items-center"
         >
-          <FontAwesomeIcon icon={faEnvelope} className="me-2" /> Contáctame
+          <FontAwesomeIcon icon={faEnvelope} className="me-2" /> Contactame
         </Nav.Link>
       </Nav>
+      <div className="redes d-flex gap-4 my-3">
+        <a
+          href="https://www.linkedin.com/in/nercolano"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-light"
+          style={{ fontSize: "2.0rem" }}
+        >
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <a
+          href="https://github.com/NatiErco"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-light"
+          style={{ fontSize: "2.0rem" }}
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+      </div>
     </div>
   );
 }

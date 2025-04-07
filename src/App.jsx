@@ -7,7 +7,7 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="main-container">
+    <div className="main-container d-flex">
       <Sidebar />
       <main className="content ms-md-5 px-3">
         <About />
