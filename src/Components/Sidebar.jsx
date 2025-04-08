@@ -7,6 +7,7 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import React from "react";
 
@@ -55,6 +56,15 @@ function Sidebar() {
         </Nav.Link>
       </Nav>
       <div className="redes d-flex gap-4 my-3">
+        <a
+          href="https://wa.me/34623140713?text=Hola%20Natalia%2C%20vi%20tu%20portfolio%20y%20me%20gustaría%20contactarte!"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-light"
+          style={{ fontSize: "2.0rem" }}
+        >
+          <FontAwesomeIcon icon={faWhatsapp} />
+        </a>
         <a
           href="https://www.linkedin.com/in/nercolano"
           target="_blank"
