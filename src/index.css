@@ -103,7 +103,7 @@ p {
   transition: all 0.2s ease-in-out;
   min-width: 180px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .boton:hover {
@@ -144,6 +144,36 @@ input
   box-shadow: 0px 20px 40px rgba(255, 0, 221, 0.8);
 }
 
+.card-proyect {
+  width: 600px;
+  min-height: 200px;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  /* box-shadow: 0px 10px 20px rgba(255, 0, 221, 0.5); */
+  border: 3px solid #b19cd9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px;
+}
+
+
+.card-proyect:hover {
+  transform: translateY(-10px);
+ 
+}
+
+.icon-tech {
+  color: #d8b9ff; /* tono suave lila */
+  font-size: 35px;
+  transition: transform 0.2s ease, color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(177, 156, 217, 0.6);
+  margin-top: 20px;
+}
+
+.icon-tech:hover {
+  transform: scale(1.2);
+  
+  text-shadow: 0 0 10px rgba(255, 0, 221, 0.9);
+}
 
 
 
