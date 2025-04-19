@@ -2,7 +2,7 @@ import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
 import Proyects from "./Components/Proyects.jsx";
 import Sidebar from "./Components/Sidebar.jsx";
-import Technologies from "./Components/technologies.jsx";
+import Technologies from "./Components/Technologies.jsx";
 
 import "./index.css";
 
