@@ -10,13 +10,25 @@ function About() {
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Sombra leve
       }}
     >
-      <h2 className="fw-bold montserrat">Sobre mí</h2>
+      <h2 className="fw-bold montserrat">Hola! Soy Natalia</h2>
+      
+      <div class="maquina">
+        <span class="texto text-light">Desarrolladora Fullstack</span>
+      </div>
+
       <p className="text-light fs-6 mt-4">
-        ¡Hola! Soy Natalia Ercolano, desarrolladora web apasionada por la
-        tecnología. Me especializo en JavaScript, React y Node.js, y utilizo mi
-        experiencia en análisis de datos para crear aplicaciones dinámicas. Mi
-        objetivo es seguir creciendo, colaborar con equipos multidisciplinarios
-        y mantenerme siempre actualizada con las últimas tendencias del sector.
+        Desarrolladora web full stack con una sólida base en análisis de datos y
+        gestión administrativa. Me apasiona transformar ideas en soluciones
+        digitales usando  <strong>JavaScript, React y Node.js.</strong> <br />
+        <br />
+        Tras una trayectoria en el mundo contable, hoy aplico ese pensamiento
+        analítico en el desarrollo de aplicaciones web dinámicas, funcionales y
+        bien estructuradas. <br />
+        <br />
+        Me encanta aprender, colaborar en entornos multidisciplinarios y aportar
+        valor con empatía, compromiso y creatividad. Mi meta: crecer
+        profesionalmente mientras ayudo a otros a hacer realidad sus proyectos.
+        🚀
       </p>
       <div className="botones-container mt-4 d-flex gap-3 justify-content-center">
         <button

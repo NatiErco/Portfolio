@@ -11,24 +11,22 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
-function Sidebar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+function Sidebar({ menuOpen, toggleMenu }) {
 
   return (
     <>
       <MobileNavbar toggleMenu={toggleMenu} />
 
+      {/* Sidebar en pantallas grandes y el navbar de menú desplegable en pantallas pequeñas */}
       <div
-        className={`sidebar d-flex flex-column align-items-center p-4 text-light position-fixed top-0 start-0 vh-100 bg-dark ${
-          menuOpen ? "d-flex" : "d-none"
-        } d-md-flex`}
+      className={`sidebar bg-dark text-light p-4 ${
+        menuOpen ? "d-flex" : "d-none"
+      } d-md-flex flex-column align-items-center`}
+   
+    
       >
         <img
-          src="perfil.jpeg"
+          src="perfil.png"
           alt="Perfil"
           className="rounded-circle mb-3"
           width="200"

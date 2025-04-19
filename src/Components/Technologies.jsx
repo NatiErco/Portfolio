@@ -1,7 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Technologies() {
   return (
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+    viewport={{ once: true }}
+  >
     <section
       id="Tecnologias"
       className="section  p-4 rounded shadow-lg w-75 w-75 mb-5 text-center d-flex flex-column justify-content-left"
@@ -26,7 +33,8 @@ function Technologies() {
           {/* Card 2: Backend */}
           <div className="card text-center">
             <h3 className="text-light fw-bold">Backend</h3>
-            <p>Node.js, Express, MySQL, Postgres, JWT, Auth0</p>
+            <p>Node.js, Express, MySQL,          Postgres, JWT, Auth0</p>
+            
           </div>
         </div>
 
@@ -46,6 +54,7 @@ function Technologies() {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 }
 

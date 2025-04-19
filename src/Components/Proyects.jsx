@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -11,7 +12,14 @@ import {
 import { faExternalLink, faServer } from "@fortawesome/free-solid-svg-icons";
 
 function Proyects() {
-  return (
+  
+    return (
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      viewport={{ once: true }}
+    >
     <section
       id="Proyects"
       className="section  p-4 rounded shadow-lg w-75 w-75 mb-5 mx-auto text-center"
@@ -48,6 +56,27 @@ function Proyects() {
       </div>
 
       <div className="card-proyect bg-dark text-white mb-4 p-3 text-start">
+        <h3 className="fw-bold text-center">Portfolio Personal</h3>
+        <p>
+        Diseño y desarrollo de portfolio web responsivo para presentar proyectos propios, CV y contacto.
+        </p>
+        <div className="d-flex gap-4 mt-2">
+          <FontAwesomeIcon icon={faReact} className="icon-tech" title="React"/>
+          <FontAwesomeIcon icon={faJs} className="icon-tech" title="JavaScript" />
+          <FontAwesomeIcon icon={faBootstrap} className="icon-tech" title="Bootstrap" />
+
+          <a
+          href="https://freelancehub-4tr0.onrender.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="boton"
+        >
+          Ver Demo <FontAwesomeIcon icon={faExternalLink} className="ms-1" />
+        </a>
+        </div>
+      
+      </div>
+      <div className="card-proyect bg-dark text-white mb-4 p-3 text-start">
         <h3 className="fw-bold text-center">Freelance-Hub</h3>
         <p>
           Creación de una plataforma que conecta freelancers con potenciales
@@ -71,6 +100,8 @@ function Proyects() {
       
       </div>
     </section>
+    
+    </motion.div>
   );
 }
 

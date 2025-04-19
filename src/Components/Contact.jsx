@@ -1,7 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+    viewport={{ once: true }}
+  >
     <section
       id="Contactame"
       className="section  p-4 rounded shadow-lg w-75 w-75 mb-5 text-center d-flex flex-column justify-content-left"
@@ -38,6 +45,7 @@ function Contact() {
         </button>
       </form>
     </section>
+    </motion.div>
   );
 }
 export default Contact;
