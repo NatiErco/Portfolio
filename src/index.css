@@ -219,14 +219,29 @@ input {
 @media (max-width: 767px) {
   .sidebar {
     position: fixed;
-    top: 56px; /* debajo del botón hamburguesa */
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #1b1b2f;
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.d-flex {
+    transform: translateX(0);
+  }
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 56px;
     left: 0;
     width: 100%;
     height: calc(100vh - 56px);
-    border-radius: 0;
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
   }
-
   .content {
     margin-left: 0;
     padding: 20px;

@@ -12,19 +12,18 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
 function Sidebar({ menuOpen, toggleMenu }) {
-
+  const sidebarClasses = `
+    sidebar bg-dark text-light p-4 
+    ${menuOpen ? "d-flex d-md-none" : "d-none d-md-flex"} 
+    flex-column align-items-center
+`
   return (
     <>
       <MobileNavbar toggleMenu={toggleMenu} />
 
-      {/* Sidebar en pantallas grandes y el navbar de menú desplegable en pantallas pequeñas */}
-      <div
-      className={`sidebar bg-dark text-light p-4 ${
-        menuOpen ? "d-flex" : "d-none"
-      } d-md-flex flex-column align-items-center`}
-   
-    
-      >
+      <div className={sidebarClasses}>
+  
+      
         <img
           src="perfil.png"
           alt="Perfil"
