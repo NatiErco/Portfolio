@@ -20,7 +20,7 @@ function Layout({ children }) {
       )}
       <div className="d-flex">
         {/* Sidebar visible solo en desktop o si menu está abierto en mobile */}
-        <Sidebar menuOpen={menuVisible} toggleMenu={toggleMenu} />
+        <Sidebar menuOpen={menuVisible}/>
         <main className="flex-grow-1 p-3">{children}</main>
       </div>
     </>

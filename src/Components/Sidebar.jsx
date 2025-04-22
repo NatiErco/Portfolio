@@ -11,18 +11,24 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
-function Sidebar({ menuOpen, toggleMenu }) {
+function Sidebar() {
+  
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   const sidebarClasses = `
-    sidebar bg-dark text-light p-4 
-    ${menuOpen ? "d-flex d-md-none" : "d-none d-md-flex"} 
-    flex-column align-items-center
-`
+  sidebar bg-dark text-light p-4 
+  ${menuOpen ? "d-flex d-md-none" : "d-none d-md-flex"} 
+  flex-column align-items-center
+`;
+
   return (
     <>
-      <MobileNavbar toggleMenu={toggleMenu} />
-
-      <div className={sidebarClasses}>
-  
+       {/* El navbar móvil será visible solo en pantallas pequeñas */}
+       <MobileNavbar toggleMenu={toggleMenu} />
+      
+       <div className={sidebarClasses}>
       
         <img
           src="perfil.png"
@@ -40,6 +46,7 @@ function Sidebar({ menuOpen, toggleMenu }) {
         <h3 className="text-light fs-6">Jr. FullStack Developer</h3>
 
         <Nav className="flex-column mt-4 w-100 p-0">
+        
           <Nav.Link
             href="#about-me"
             className="text-light fs-6 py-2 d-flex align-items-center"

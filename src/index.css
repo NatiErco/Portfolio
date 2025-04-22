@@ -204,34 +204,103 @@ input {
   }
 }
 
-/* RESPONSIVE para pantallas chicas */
+/* MEDIA QUERIES PARA SIDEBAR  */
+
+/* MEDIA QUERIES PARA SIDEBAR */
+
+/* En pantallas grandes, el sidebar debe estar visible SIEMPRE */
 @media (min-width: 768px) {
+
   .sidebar {
-    width: 300px;
     position: fixed;
     top: 0;
     left: 0;
+    width: 300px;
     height: 100vh;
+    background-color: #1b1b2f;
+    z-index: 1050;
     border-radius: 20px;
+    display: flex !important; /* Siempre visible */
+    transform: none; /* Nada de ocultarlo */
+  }
+
+  .overlay {
+    display: none; /* Sin overlay en desktop */
   }
 }
 
+
+/* ——— MÓVIL (<768px) ——— */
 @media (max-width: 767px) {
-  .sidebar {
+   .sidebar {
     position: fixed;
     top: 56px;
     left: 0;
     width: 100%;
-    height: auto;
-    background-color: #1b1b2f;
+    background: rgba(27, 27, 47, 0.65)!important;; /* Fondo translúcido negro (ajustado para ver el fondo detrás) */
+    backdrop-filter: blur(10px)!important;; /* Desenfoque del fondo */
     z-index: 1050;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
   }
-
+  
   .sidebar.d-flex {
-    transform: translateX(0);
+    transform: translateX(0) !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: rgba(27, 27, 47, 0.65)!important;; /* Fondo translúcido */
+    backdrop-filter: blur(10px)!important;; /* Desenfoque */
+    height: 100vh; /* Asegura altura completa */
   }
+
+  .sidebar img,
+  .sidebar h2,
+  .sidebar h3,
+  .redes {
+    display: none !important;
+  }
+
+  .sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem; /* Espacio entre links */
+  }
+
+  /* Estilo para los enlaces del sidebar */
+  .sidebar .nav-link {
+    font-size: 1.3rem;
+    color: var(--neon-violet) !important; /* Color violeta neón */
+    text-decoration: none !important;
+    text-shadow: 0 0 6px var(--neon-violet), 0 0 12px var(--neon-violet); /* Resplandor violeta */
+    padding: 0.6rem 1.5rem;
+    background: rgba(27, 27, 47, 0.35); /* Fondo oscuro translúcido */
+    border: 1px solid var(--neon-violet); /* Borde violeta */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(4px); /* Efecto de desenfoque para que se vea el fondo */
+    box-shadow:
+      0 0 5px rgba(255, 0, 255, 0.3),
+      inset 0 0 10px rgba(255, 0, 255, 0.2); /* Sombra violeta */
+  }
+
+  .sidebar .nav-link:hover {
+    color: #fff !important;
+    background: rgba(255, 0, 255, 0.15); /* Fondo más claro al hacer hover */
+    text-shadow:
+      0 0 10px var(--neon-violet),
+      0 0 20px var(--neon-violet),
+      0 0 30px var(--neon-violet); /* Efecto más fuerte al pasar el cursor */
+    transform: scale(1.05); /* Efecto de ampliación */
+    box-shadow:
+      0 0 10px rgba(255, 0, 255, 0.4),
+      inset 0 0 15px rgba(255, 0, 255, 0.3); /* Efecto de sombra interna al hacer hover */
+  }
+
   .overlay {
     display: block;
     position: fixed;
@@ -239,41 +308,11 @@ input {
     left: 0;
     width: 100%;
     height: calc(100vh - 56px);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
     z-index: 1000;
   }
-  .content {
-    margin-left: 0;
-    padding: 20px;
-  }
-
-  .sidebar img {
-    margin-left: 0;
-    width: 150px;
-    height: 150px;
-  }
 }
 
-@media (min-width: 769px) {
-  .content {
-    margin-left: 300px;
-  }
-}
-
-/* Aseguramos que el contenido del sidebar sea responsive */
-.nav-link {
-  font-size: 16px;
-  padding: 10px 20px;
-  text-align: left;
-}
-
-.nav-link:hover {
-  background-color: rgba(177, 156, 217, 0.1);
-}
-
-.navbar-toggler {
-  display: none;
-}
 
 /* Estilo del scrollbar https://scrollbar.app/ */
 
