@@ -43,10 +43,10 @@ function Sidebar() {
         >
           Natalia Ercolano
         </h2>
-        <h3 className="text-light fs-6">Jr. FullStack Developer</h3>
+        <h3 className="text-light fs-6">FullStack Developer</h3>
 
         <Nav className="flex-column mt-4 w-100 p-0">
-        
+
           <Nav.Link
             href="#about-me"
             className="text-light fs-6 py-2 d-flex align-items-center"

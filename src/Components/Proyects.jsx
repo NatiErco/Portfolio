@@ -29,16 +29,17 @@ function Proyects() {
       }}
     >
     <h2 className="fw-bold montserrat">Proyectos</h2>
-      <div
-        className="card-proyect bg-dark text-white mb-4 p-3 text-start"
-        style={{ maxWidth: "500px!important" }}
-      >
+
+    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-3 gy-4 justify-content-center mt-4">
+    <div className="col d-flex">
+    <div className="card-proyect bg-dark text-white p-3 text-start w-100">
+      
         <h3 className="fw-bold text-center">Poke-Test</h3>
         <p>
           Aplicación web que permite a los usuarios buscar y explorar
           información sobre Pokémon, utilizando la API de PokeAPI.
         </p>
-        <div className="d-flex gap-4 mt-2">
+       <div className="d-flex flex-wrap gap-3 mt-2 align-items-center">
 
         <FontAwesomeIcon icon={faHtml5} className="icon-tech" title="HTML5" />
         <FontAwesomeIcon icon={faCss3Alt} className="icon-tech" title="CSS3" />
@@ -53,14 +54,16 @@ function Proyects() {
             Ver Demo <FontAwesomeIcon icon={faExternalLink} className="ms-1" />
           </a>
         </div>
+        </div>
       </div>
 
-      <div className="card-proyect bg-dark text-white mb-4 p-3 text-start">
+      <div className="col d-flex">
+       <div className="card-proyect bg-dark text-white p-3 text-start w-100">
         <h3 className="fw-bold text-center">Portfolio Personal</h3>
         <p>
         Diseño y desarrollo de portfolio web responsivo para presentar proyectos propios, CV y contacto.
         </p>
-        <div className="d-flex gap-4 mt-2">
+        <div className="d-flex flex-wrap gap-3 mt-2 align-items-center">
           <FontAwesomeIcon icon={faReact} className="icon-tech" title="React"/>
           <FontAwesomeIcon icon={faJs} className="icon-tech" title="JavaScript" />
           <FontAwesomeIcon icon={faBootstrap} className="icon-tech" title="Bootstrap" />
@@ -74,16 +77,18 @@ function Proyects() {
           Ver Demo <FontAwesomeIcon icon={faExternalLink} className="ms-1" />
         </a>
         </div>
-      
-      </div>
-      <div className="card-proyect bg-dark text-white mb-4 p-3 text-start">
+        </div>
+       </div>
+
+       <div className="col d-flex">
+        <div className="card-proyect bg-dark text-white p-3 text-start w-100">
         <h3 className="fw-bold text-center">Freelance-Hub</h3>
         <p>
           Creación de una plataforma que conecta freelancers con potenciales
           clientes, permitiendo la búsqueda de servicios y la interacción entre
           usuarios.
         </p>
-        <div className="d-flex gap-4 mt-2">
+        <div className="d-flex flex-wrap gap-3 mt-2 align-items-center">
           <FontAwesomeIcon icon={faReact} className="icon-tech" title="React"/>
           <FontAwesomeIcon icon={faJs} className="icon-tech" title="JavaScript" />
           <FontAwesomeIcon icon={faNodeJs} className="icon-tech"title="Node.js"/>
@@ -97,7 +102,8 @@ function Proyects() {
           Ver Demo <FontAwesomeIcon icon={faExternalLink} className="ms-1" />
         </a>
         </div>
-      
+        </div>
+        </div>
       </div>
     </section>
     
