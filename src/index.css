@@ -47,6 +47,19 @@ html {
   box-shadow: 0 0 10px rgba(177, 156, 217, 0.7);
 }
 
+.sidebar .nav-link:hover {
+  color: #fff !important;
+  background: rgba(255, 0, 255, 0.15); /* Fondo más claro al hacer hover */
+  text-shadow:
+    0 0 10px var(--neon-violet),
+    0 0 20px var(--neon-violet),
+    0 0 30px var(--neon-violet); /* Efecto más fuerte al pasar el cursor */
+  transform: scale(1.05); /* Efecto de ampliación */
+  box-shadow:
+    0 0 10px rgba(255, 0, 255, 0.4),
+    inset 0 0 15px rgba(255, 0, 255, 0.3); /* Efecto de sombra interna al hacer hover */
+}
+
 .overlay {
   position: fixed;
   top: 56px; /* altura del MobileNavbar */
@@ -237,8 +250,9 @@ input {
     top: 56px;
     left: 0;
     width: 100%;
-    background: rgba(27, 27, 47, 0.65)!important;; /* Fondo translúcido negro (ajustado para ver el fondo detrás) */
-    backdrop-filter: blur(10px)!important;; /* Desenfoque del fondo */
+    
+    background: rgba(27, 27, 47, 0.65)!important; /* Fondo translúcido negro (ajustado para ver el fondo detrás) */
+    backdrop-filter: blur(10px)!important; /* Desenfoque del fondo */
     z-index: 1050;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
@@ -251,9 +265,9 @@ input {
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
-    background: rgba(27, 27, 47, 0.65)!important;; /* Fondo translúcido */
-    backdrop-filter: blur(10px)!important;; /* Desenfoque */
-    height: 100vh; /* Asegura altura completa */
+    background: rgba(27, 27, 47, 0.65)!important; /* Fondo translúcido */
+    backdrop-filter: blur(10px)!important; /* Desenfoque */
+    height: 50vh; /* Asegura altura completa */
   }
 
   .sidebar img,
