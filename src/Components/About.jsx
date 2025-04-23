@@ -16,15 +16,17 @@ function About() {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Sombra leve
         }}
       >
-        <h2 className="fw-bold montserrat">Sobre Mi</h2>
-        <div className="separator"></div>
+      <h2 className="fw-bold montserrat">
+      Sobre Mi
+    </h2>
+       
 
         <div class="maquina">
-          <span class="texto text-light">FullStack Developer</span>
+          <span class="texto text-light">¡Hola! Soy Nati Ercolano</span>
         </div>
 
         <p className="text-light fs-6 mt-4">
-          Soy desarrolladora web fullstack con experiencia en crear aplicaciones
+          Desarrolladora Full Stack con experiencia en crear aplicaciones
           robustas usando <strong>JavaScript, React y Node.js.</strong> Tras
           años en el mundo contable, he encontrado mi pasión en la programación,
           combinando lógica y creatividad para desarrollar proyectos que
@@ -39,7 +41,7 @@ function About() {
             className="boton"
             onClick={() => window.open("/cv.pdf", "_blank")}
           >
-            CV Español{" "}
+            Descargar CV {" "}
           </button>
           <button
             className="boton"

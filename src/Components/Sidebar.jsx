@@ -31,11 +31,16 @@ function Sidebar() {
        <div className={sidebarClasses}>
       
         <img
-          src="perfil.png"
+          src="foto.jpg"
           alt="Perfil"
           className="rounded-circle mb-3"
           width="200"
           height="200"
+          style={{
+            transform: "translateY(-10px)",
+    boxShadow: "0 0 30px 10px rgba(255, 0, 221, 0.6)", // glow alrededor
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          }}
         />
         <h2
           className="text-center fw-bold fs-8 mb-3 mt-3"
@@ -43,7 +48,7 @@ function Sidebar() {
         >
           Natalia Ercolano
         </h2>
-        <h3 className="text-light fs-6">FullStack Developer</h3>
+        <h3 className="text-light fs-6">Full Stack Developer</h3>
 
         <Nav className="flex-column mt-4 w-100 p-0">
 

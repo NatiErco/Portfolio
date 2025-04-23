@@ -218,25 +218,22 @@ input {
 
 
 .maquina {
-  width: 24ch; /* Cantidad de caracteres visibles */
+  width: 0ch; /* Cantidad de caracteres visibles */
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid #000;
   font-family: monospace;
   font-size: 2rem;
-  animation: escribir 3s steps(24) forwards;
+  animation: escribir 4s steps(30) infinite;
 }
 @keyframes escribir {
   from {
-    width: 0;
+    width: 0ch;
   }
   to {
-    width: 24ch;
+    width: 30ch;
   }
 }
-
-/* MEDIA QUERIES PARA SIDEBAR  */
-
 /* MEDIA QUERIES PARA SIDEBAR */
 
 /* En pantallas grandes, el sidebar debe estar visible SIEMPRE */

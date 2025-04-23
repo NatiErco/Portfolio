@@ -36,8 +36,7 @@ function Proyects() {
       
         <h3 className="fw-bold text-center">Poke-Test</h3>
         <p>
-          Aplicación web que permite a los usuarios buscar y explorar
-          información sobre Pokémon, utilizando la API de PokeAPI.
+        Aplicación web interactiva tipo memotest, con temática Pokémon, pensada para ofrecer una experiencia entretenida y visualmente atractiva.
         </p>
        <div className="d-flex flex-wrap gap-3 mt-2 align-items-center">
 
@@ -59,17 +58,18 @@ function Proyects() {
 
       <div className="col d-flex">
        <div className="card-proyect bg-dark text-white p-3 text-start w-100">
-        <h3 className="fw-bold text-center">Portfolio Personal</h3>
+        <h3 className="fw-bold text-center">Ecommerce-Pet</h3>
         <p>
-        Diseño y desarrollo de portfolio web responsivo para presentar proyectos propios, CV y contacto.
+        Desarrollo de la interfaz de una tienda online especializada en pegatinas para mascotas, con la implementacion de un carrito de compras.
         </p>
         <div className="d-flex flex-wrap gap-3 mt-2 align-items-center">
-          <FontAwesomeIcon icon={faReact} className="icon-tech" title="React"/>
-          <FontAwesomeIcon icon={faJs} className="icon-tech" title="JavaScript" />
-          <FontAwesomeIcon icon={faBootstrap} className="icon-tech" title="Bootstrap" />
+        <FontAwesomeIcon icon={faHtml5} className="icon-tech" title="HTML5" />
+        <FontAwesomeIcon icon={faCss3Alt} className="icon-tech" title="CSS3" />
+        <FontAwesomeIcon icon={faJs} className="icon-tech" title="JavaScript" />
+          
 
           <a
-          href="https://freelancehub-4tr0.onrender.com/"
+          href="https://ecommerce-dogs.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="boton"
