@@ -22,7 +22,7 @@ function About() {
        
 
         <div class="maquina">
-          <span class="texto text-light">¡Hola! Soy Nati Ercolano</span>
+          <span class="texto text-light">¡Hola! Soy Nati </span>
         </div>
 
         <p className="text-light fs-6 mt-4">
