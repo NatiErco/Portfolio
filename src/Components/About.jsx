@@ -26,16 +26,12 @@ function About() {
         </div>
 
         <p className="text-light fs-6 mt-4">
-          Desarrolladora Full Stack con experiencia en crear aplicaciones
-          robustas usando <strong>JavaScript, React y Node.js.</strong> Tras
-          años en el mundo contable, he encontrado mi pasión en la programación,
-          combinando lógica y creatividad para desarrollar proyectos que
-          importan. <br />
+           Soy desarrolladora web fullstack, apasionada por crear aplicaciones funcionales y escalables utilizando tecnologías como <strong>JavaScript, React y Node.js.</strong> Luego de varios años trabajando en el área contable, descubrí en la programación un espacio donde puedo combinar mi lógica, creatividad y curiosidad para resolver problemas reales y construir soluciones significativas.      <br />
           <br />
-          Me encanta aprender y colaborar, aportando siempre valor con empatía y
-          compromiso. Mi objetivo es seguir creciendo profesionalmente mientras
-          ayudo a otros a hacer realidad sus sueños digitales. 🚀
-        </p>
+          Estoy dando mis primeros pasos en este nuevo camino profesional,  buscando mi primera experiencia como desarrolladora. Me destaco por mi compromiso, capacidad de adaptación y trabajo en equipo, siempre con una actitud empática, proactiva y con mindset digital orientada al aprendizaje constante.<br />
+          <br />
+          Creo en el poder de la tecnología para transformar ideas en realidades, y mi objetivo es ser parte de proyectos que marquen una diferencia 🚀
+        </p> 
         <div className="botones-container mt-4 d-flex gap-3 justify-content-center">
           <button
             className="boton"
